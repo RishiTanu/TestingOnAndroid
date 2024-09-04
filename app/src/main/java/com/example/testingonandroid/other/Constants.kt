@@ -1,4 +1,4 @@
-package com.example.testingonandroid.pixelsApi
+package com.example.testingonandroid.other
 
 object Constants {
     const val DATABASE_NAME = "shopping_db"
