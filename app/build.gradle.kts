@@ -9,7 +9,6 @@ plugins {
 android {
     namespace = "com.example.testingonandroid"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.example.testingonandroid"
         minSdk = 24
@@ -17,6 +16,9 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        // Read the API_KEY from gradle.properties
+        val apiKey: String = project.findProperty("API_KEY") as String
+        buildConfigField("String", "API_KEY", apiKey)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
